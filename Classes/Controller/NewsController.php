@@ -664,7 +664,7 @@ class NewsController extends NewsBaseController
             foreach ($stdWrapProperties as $key) {
                 if (is_array($typoScriptArray[$key . '.'])) {
                     $originalSettings[$key] = $this->configurationManager->getContentObject()->stdWrap(
-                        $typoScriptArray[$key],
+                        $typoScriptArray[$key] ?? '',
                         $typoScriptArray[$key . '.']
                     );
                 }
